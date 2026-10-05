@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Portfólio de Ingrid Braga com projetos em desenvolvimento web, UX/UI e conteúdo digital."
+    />
+
+    <title>Ingrid Braga | Desenvolvimento Web, UX/UI e Conteúdo Digital</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Unbounded:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      try {
+        const theme = localStorage.getItem("theme");
+        document.documentElement.dataset.theme =
+          theme ||
+          (matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+      } catch (error) {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio">Ingrid Braga</a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#projetos">Projetos</a>
+        <a href="#trajetoria">Trajetória</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato">Contato</a>
+
+        <a
+          class="nav-resume"
+          href="curriculo-ingrid-braga.pdf"
+          download
+        >
+          Currículo
+        </a>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          aria-label="Alternar dark mode"
+        >
+          <span class="theme-icon" aria-hidden="true"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="inicio" class="hero">
+        <div class="hero-content">
+          <p class="availability">
+            <span></span>
+            Desenvolvimento Web · UX/UI · Conteúdo Digital
+          </p>
+
+          <h1>Ingrid Braga</h1>
+
+          <p class="hero-copy">
+            Desenvolvo projetos digitais unindo tecnologia, interface e
+            comunicação.
+          </p>
+
+          <div class="hero-tags" aria-label="Áreas principais">
+            <span>Desenvolvimento Web</span>
+            <span>UX/UI</span>
+            <span>Conteúdo Digital</span>
+            <span>Edição de Vídeo</span>
+            <span>IA</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#projetos">
+              Ver projetos
+            </a>
+
+            <a
+              class="button secondary"
+              href="curriculo-ingrid-braga.pdf"
+              download
+            >
+              Baixar currículo
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Resumo profissional">
+          <div class="hero-orbit" aria-hidden="true">
+            <span>HTML</span>
+            <span>UX</span>
+            <span>IA</span>
+            <span>JS</span>
+          </div>
+
+          <span class="panel-label">Foco atual</span>
+
+          <p>
+            Desenvolvimento web, UX/UI e projetos digitais que aproximam
+            tecnologia e pessoas.
+          </p>
+
+          <div class="panel-links">
+            <a
+              href="https://github.com/Ibrag4"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/ibraga"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </aside>
+      </section>
+
+      <!-- PROJETOS -->
+      <section id="projetos" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Projetos</p>
+
+          <h2>Alguns projetos que já coloquei em prática.</h2>
+
+          <p>
+            Projetos acadêmicos, pessoais e de hackathon que mostram um pouco
+            da minha forma de trabalhar com tecnologia, interface e produto.
+          </p>
+        </div>
+
+        <div
+          class="filters"
+          role="group"
+          aria-label="Filtrar projetos"
+        >
+          <button
+            class="filter-button is-active"
+            type="button"
+            data-filter="todos"
+            aria-pressed="true"
+          >
+            Todos
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="dev"
+            aria-pressed="false"
+          >
+            Desenvolvimento
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="ux"
+            aria-pressed="false"
+          >
+            UX/UI
+          </button>
+
+          <button
+            class="filter-button"
+            type="button"
+            data-filter="conteudo"
+            aria-pressed="false"
+          >
+            Conteúdo
+          </button>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- BUSCADOR DE CEP -->
+          <article class="project-card" data-category="dev">
+            <div class="project-visual cep">CEP</div>
+
+            <div class="project-body">
+              <span class="project-type">
+                Desenvolvimento Web
+              </span>
+
+              <h3>Buscador de CEP</h3>
+
+              <p>
+                Aplicação web que consulta endereços a partir do CEP,
+                utilizando uma API externa e tratando os dados para exibição
+                na interface.
+              </p>
+
+              <div class="tags">
+                <span>React</span>
+                <span>Vite</span>
+                <span>JavaScript</span>
+                <span>API</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Demo</a>
+                <a href="#">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJETO PHP -->
+          <article class="project-card" data-category="dev">
+            <div class="project-visual php">PHP</div>
+
+            <div class="project-body">
+              <span class="project-type">
+                Desenvolvimento Web
+              </span>
+
+              <h3>Sistema em PHP e MySQL</h3>
+
+              <p>
+                Projeto desenvolvido para praticar criação de sistemas web
+                com PHP, banco de dados MySQL, cadastro, consulta e
+                organização das informações.
+              </p>
+
+              <div class="tags">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>CRUD</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Demo</a>
+                <a href="#">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PIZZARIO -->
+          <article class="project-card" data-category="dev">
+            <div class="project-visual pizza">PR</div>
+
+            <div class="project-body">
+              <span class="project-type">
+                Desenvolvimento Web
+              </span>
+
+              <h3>PizzaRio</h3>
+
+              <p>
+                Projeto de interface para uma pizzaria, desenvolvido com
+                foco em apresentação dos produtos, navegação e experiência
+                em diferentes tamanhos de tela.
+              </p>
+
+              <div class="tags">
+                <span>Next.js</span>
+                <span>React</span>
+                <span>TypeScript</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Demo</a>
+                <a href="#">Código</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PETRONECT -->
+          <article class="project-card" data-category="ux">
+            <div class="project-visual college">UX</div>
+
+            <div class="project-body">
+              <span class="project-type">
+                Hackathon · UX/UI
+              </span>
+
+              <h3>Conexão Ancestral · Petronect</h3>
+
+              <p>
+                Projeto desenvolvido em hackathon para melhorar a jornada de
+                fornecedores, com pesquisa, estruturação de fluxo,
+                segmentação e estratégias de reengajamento.
+              </p>
+
+              <div class="tags">
+                <span>UX/UI</span>
+                <span>Figma</span>
+                <span>Pesquisa</span>
+                <span>LGPD</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Detalhes</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CONTEÚDO -->
+          <article class="project-card" data-category="conteudo">
+            <div class="project-visual video">VID</div>
+
+            <div class="project-body">
+              <span class="project-type">
+                Conteúdo Digital
+              </span>
+
+              <h3>Conteúdo e edição de vídeo</h3>
+
+              <p>
+                Criação de materiais para redes sociais, edição de vídeos e
+                organização de conteúdos digitais, usando ferramentas como
+                Canva e CapCut.
+              </p>
+
+              <div class="tags">
+                <span>Canva</span>
+                <span>CapCut</span>
+                <span>Vídeo</span>
+                <span>Redes sociais</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">Ver materiais</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- TRAJETÓRIA -->
+      <section id="trajetoria" class="section timeline-section">
+        <div class="section-heading">
+          <p class="eyebrow">Trajetória</p>
+
+          <h2>Uma trajetória que começou fora da tecnologia.</h2>
+
+          <p>
+            Minha experiência profissional passou por atendimento,
+            administração e faturamento antes de chegar ao desenvolvimento
+            web e aos projetos digitais.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- RAMPA -->
+          <article class="timeline-item">
+            <time>09/2026 - 10/2026</time>
+
+            <div>
+              <h3>Produto Digital e Conteúdo · Rampa</h3>
+
+              <p>
+                Atuação em uma startup de soluções digitais com IA,
+                participando de atividades relacionadas a produto, UX,
+                conteúdo e comunicação digital.
+              </p>
+
+              <ul>
+                <li>
+                  Apoio na organização de ideias e estruturação de produto
+                  digital.
+                </li>
+
+                <li>
+                  Participação em pesquisas, conteúdos e iniciativas de UX.
+                </li>
+
+                <li>
+                  Criação de materiais para Instagram e LinkedIn.
+                </li>
+
+                <li>
+                  Apoio na estruturação de entrevistas e materiais de
+                  avaliação para processos seletivos.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- A2 -->
+          <article class="timeline-item">
+            <time>03/2026 - 08/2026</time>
+
+            <div>
+              <h3>Estágio em Desenvolvimento Web · A2 Solutions</h3>
+
+              <p>
+                Experiência com desenvolvimento e manutenção de sistemas
+                web, trabalhando principalmente com PHP e tecnologias
+                front-end.
+              </p>
+
+              <ul>
+                <li>
+                  Desenvolvimento e manutenção com PHP, JavaScript, HTML,
+                  CSS e MySQL.
+                </li>
+
+                <li>
+                  Correção de erros e implementação de melhorias em sistemas
+                  internos.
+                </li>
+
+                <li>
+                  Apoio e suporte técnico a usuários e clientes.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- UNISUAM -->
+          <article class="timeline-item">
+            <time>2022 - 2025</time>
+
+            <div>
+              <h3>Análise e Desenvolvimento de Sistemas · UNISUAM</h3>
+
+              <p>
+                Graduação concluída em 2025, com formação em desenvolvimento
+                de sistemas, lógica de programação, banco de dados e
+                tecnologias web.
+              </p>
+            </div>
+          </article>
+
+          <!-- GABARDO -->
+          <article class="timeline-item">
+            <time>06/2023 - 02/2026</time>
+
+            <div>
+              <h3>Assistente Administrativo e Faturista · Transportes Gabardo</h3>
+
+              <p>
+                Experiência com rotinas administrativas, faturamento e
+                organização de documentos em uma empresa do setor de
+                transportes.
+              </p>
+
+              <ul>
+                <li>
+                  Controle de planilhas e organização de informações.
+                </li>
+
+                <li>
+                  Apoio em faturamento e emissão de documentos.
+                </li>
+
+                <li>
+                  Comunicação com motoristas, equipes e setores internos.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- HABILIDADES -->
+      <section id="habilidades" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Habilidades</p>
+
+          <h2>O que eu uso para tirar uma ideia do papel.</h2>
+        </div>
+
+        <div class="skill-grid">
+
+          <article>
+            <h3>Desenvolvimento Web</h3>
+            <p>
+              HTML · CSS · JavaScript · React · PHP · MySQL · Git · GitHub
+            </p>
+          </article>
+
+          <article>
+            <h3>UX/UI</h3>
+            <p>
+              Figma · Wireframes · Protótipos · Interfaces · Usabilidade ·
+              Design responsivo
+            </p>
+          </article>
+
+          <article>
+            <h3>Conteúdo Digital</h3>
+            <p>
+              Canva · CapCut · Edição de vídeo · Roteiros · Redes sociais ·
+              Materiais digitais
+            </p>
+          </article>
+
+          <article>
+            <h3>IA e ferramentas digitais</h3>
+            <p>
+              Pesquisa · Ideação · Organização de conteúdo · Ferramentas de
+              IA · Apoio à criação de produtos digitais
+            </p>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="contact-section">
+        <div>
+          <p class="eyebrow">Contato</p>
+
+          <h2>Tem uma ideia? Vamos conversar.</h2>
+
+          <p>
+            Rio de Janeiro, RJ · Aberta a oportunidades, projetos e
+            colaborações na área digital.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a
+            class="button primary"
+            href="mailto:ingridoliveira1222@gmail.com"
+          >
+            E-mail
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://www.linkedin.com/in/ibraga"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/Ibrag4"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            class="button secondary"
+            href="curriculo-ingrid-braga.pdf"
+            download
+          >
+            Currículo
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 Ingrid Braga</span>
+      <a href="#inicio">Voltar ao topo</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
