@@ -3,6 +3,22 @@ const mainNav = document.querySelector(".main-nav");
 const themeButton = document.querySelector(".theme-toggle");
 const filterButtons = document.querySelectorAll(".filter-button");
 const projectCards = document.querySelectorAll(".project-card");
+const scrollProgress = document.querySelector(".scroll-progress");
+
+// Barra de progresso do scroll
+function updateScrollProgress() {
+  if (!scrollProgress) return;
+
+  const scrollableHeight =
+    document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+
+  scrollProgress.style.transform = `scaleX(${progress})`;
+}
+
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
 
 // Menu mobile
 menuButton?.addEventListener("click", () => {
