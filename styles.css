@@ -699,6 +699,21 @@ h3 {
 }
 
 /* =========================
+   Whatsapp
+========================= */
+
+.whatsapp-button {
+  gap: 9px;
+}
+
+.whatsapp-icon {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  display: block;
+}
+
+/* =========================
    FILTROS
 ========================= */
 
